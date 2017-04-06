@@ -6,6 +6,7 @@ var provider = new web3.providers.HttpProvider('http://192.168.9.147:8545');
 web3.setProvider(provider);
 
 var Conference;
+//加载Conference.json文件内容
 $.ajax({
    type: "get",
    url: "./contracts/Conference.json",
@@ -14,37 +15,39 @@ $.ajax({
      Conference = TruffleContract(msg);
    }
 });
-
 Conference.setProvider(provider);
 
+//初始化
 function initializeConference(){
   	Conference.new({from:account,gas:3141592}).then(
   	  function(conf){
   	    	myConferenceInstance = conf;
-  	    	$("#confAddress").html(myConferenceInstance.address);
+  	    	$("#confAddress").html(myConferenceInstance.address);//部署成功后，智能合约在区块链的地址
   	    	checkValues();
   	  }
   	)
 }
 
+//检查初始化的数据
 function checkValues(){
   	myConferenceInstance.quota.call().then(
   	  function(quota){
-  	    $("input#confQuota").val(quota);
+  	    $("input#confQuota").val(quota);//获取票数，默认500
   	    return 	myConferenceInstance.organizer.call();
   	  }).then(
   	    function(organizer){
-  	    	$("input#confOrganizer").val(organizer);
+  	    	$("input#confOrganizer").val(organizer);//智能合约在区块链的地址
   	    	return myConferenceInstance.numRegistrants.call();
   	    }
   	  ).then(
   	    function(num){
-  	    	$("#numRegistrants").html(num.toNumber());
+  	    	$("#numRegistrants").html(num.toNumber());//显示0
 					return myConferenceInstance.organizer.call();
   	    }
   	  );
 }
 
+//修改默认票数
 function changeQuota(val){
   	myConferenceInstance.changeQuota(val,{from:accounts[0]}).then(
   	  function(){
@@ -63,19 +66,21 @@ function changeQuota(val){
   	);
 }
 
+//买票
 function buyTicket(buyerAddress,ticketPrice){
+	//buyerAddress使用除第一个的地址测试
 	myConferenceInstance.buyTicket({from:buyerAddress,value:ticketPrice}).then(
 	  function(){
-	    return 	myConferenceInstance.numRegistrants.call();
+	    return 	myConferenceInstance.numRegistrants.call();//获取买票的数量
 	  }).then(
 	    function(num){
 	      $("#numRegistrants").html(num.toNumber());
-	      return myConferenceInstance.registrantsPaid.call(buyerAddress);	
+	      return myConferenceInstance.registrantsPaid.call(buyerAddress);	//获取买票者所付的金额
 	    }
 	  ).then(
 	    function(valuePaid){
 	      var msgResult;
-	      if(valuePaid.toNumber() == ticketPrice)	{
+	      if(valuePaid.toNumber() == ticketPrice)	{//买票者所付的金额等于页面输入的金额，购买成功
 	      	msgResult = "Purchase successful";
 	      }else {
 					msgResult = "Purchase failed";
@@ -85,8 +90,10 @@ function buyTicket(buyerAddress,ticketPrice){
 	  );
 }
 
+//退票
 function refundTicket(buyerAddress, ticketPrice){
 	var msgResult;
+	//buyerAddress购票者的地址
 	myConferenceInstance.registrantsPaid.call(buyerAddress).then(
 	  function(result){
 	    if(result.toNumber()==0){
@@ -94,12 +101,12 @@ function refundTicket(buyerAddress, ticketPrice){
 	    }else{
 	      myConferenceInstance.refundTicket(buyerAddress,ticketPrice,{from:accounts[0]}).then(
 	        function(){
-	          return myConferenceInstance.numRegistrants.call();
+	          return myConferenceInstance.numRegistrants.call();//退票后，查看买票的数量
 	        }
 	      ).then(
 	        function(num){
 	          $("#numRegistrants").html(num.toNumber());
-	          return 	myConferenceInstance.registrantsPaid.call(buyerAddress);
+	          return 	myConferenceInstance.registrantsPaid.call(buyerAddress);//退票后，查看对应地址的金额
 	        }
 	      ).then(
 	        function(valuePaid){
