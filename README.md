@@ -27,3 +27,4 @@ build(truffle升级到3.0以后，我不知道怎么部署web应用，暂时把h
 hooked-web3-provider.min.js  jquery.min.js  lightwallet.min.js  truffle-contract.js  truffle-contract.min.js  web3.js  web3.js.map  web3-light.js  web3-light.min.js  web3.min.js
 
 conference.html：买票，退票，创建钱包
+sign.html:区块链语言Solidity校验椭圆曲线加密数字签名

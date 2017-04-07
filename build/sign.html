@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="gbk">
+  <title>区块链语言Solidity校验椭圆曲线加密数字签名</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin: 20px;
+    }
+    button {
+      padding: 5px 16px;
+      border-radius: 4px;
+    }
+    button#changeQuota { background-color: yellow; }
+    button#buyTicket { background-color: #98fb98; }
+    button#refundTicket { background-color: pink; }
+    button#createWallet { background-color: #add8e6; }
+    #seed {color: green;}
+
+  </style>
+  <script type="text/javascript" src="./dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./dist/web3.js"></script>  
+  <script type="text/javascript" src="./dist/truffle-contract.min.js"></script>
+  <script type="text/javascript" src="./dist/lightwallet.min.js"></script>  
+  <script type="text/javascript" src="./dist/hooked-web3-provider.min.js"></script>  
+  <script type="text/javascript" src="./sign.js"></script>
+</head>
+<body>
+  <h1>区块链语言Solidity校验椭圆曲线加密数字签名</h1>
+  <div class="section">
+    合约地址: <div id="confAddress"></div>
+  </div>
+  <div class="section">
+    第一个账号: <div id="account"></div>
+  </div>
+  <div class="section">
+    数据abc生成哈希串: <div id="sha3Msg"></div>
+  </div>
+  <div class="section">
+    使用第一个账号，生成数字签名: <div id="signedData"></div>
+  </div>
+  
+  <div class="section">
+    公匙地址(第一个账号): <input type="text" id="decodeAddress" size="50"/>
+      <button id="GetDecode">GetDecode</button>
+  </div>
+</body>
+</html> 

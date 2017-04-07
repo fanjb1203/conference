@@ -1,0 +1,60 @@
+{
+  "contract_name": "Sign",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "addr",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "h",
+          "type": "bytes32"
+        },
+        {
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "sign",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b610145806100196000396000f300606060405263ffffffff60e060020a600035041663767800de811461002f57806376a31a7214610058575b610000565b346100005761003c610076565b60408051600160a060020a039092168252519081900360200190f35b346100005761007460043560ff60243516604435606435610085565b005b600054600160a060020a031681565b60408051600081815260208083018452918301819052825187815260ff87168184015280840186905260608101859052925160019360808082019493601f19840193928390039091019190866161da5a03f115610000575050604051601f1901516000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039092169190911790555b505050505600a165627a7a72305820bfb3e77ce5f360105f6abd4e937cc63a938da6e1bfee59c70ba94df81f6e1b290029",
+  "networks": {
+    "1491544328236": {
+      "events": {},
+      "links": {},
+      "address": "0xc812a2425d174b90a0cf1ddb1638836930dce5fa",
+      "updated_at": 1491547199773
+    },
+    "1491550148706": {
+      "events": {},
+      "links": {},
+      "address": "0x8131e08e3da0e24c55afd7756c7bd009367fcee4",
+      "updated_at": 1491550154677
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1491550154677
+}
