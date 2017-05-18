@@ -1,0 +1,41 @@
+I0418 18:16:14.720052 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:16:14.792501 ethdb/database.go:176] closed db:/home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:16:14.804137 node/node.go:176] instance: Geth/v1.5.9-stable-a07539fb/linux/go1.7.3
+I0418 18:16:14.804185 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:16:14.926428 eth/backend.go:187] Protocol Versions: [63 62], Network Id: 1
+I0418 18:16:14.926846 eth/backend.go:215] Chain config: {ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000}
+I0418 18:16:14.993266 core/blockchain.go:219] Last header: #2380 [4d24e86f…] TD=562714891
+I0418 18:16:14.993327 core/blockchain.go:220] Last block: #2380 [4d24e86f…] TD=562714891
+I0418 18:16:14.993351 core/blockchain.go:221] Fast block: #2380 [4d24e86f…] TD=562714891
+I0418 18:16:15.029777 p2p/server.go:340] Starting Server
+I0418 18:16:17.167238 p2p/discover/udp.go:227] Listening, enode://370c4933631a2429bc8383be17bb322338275530796c3eef8ce2c2e4be26e9a29b55634b360897fc9ae10eb376a860a9d6ef62e2080411f1d8b14117c5b1f04a@0.0.0.0:30303
+I0418 18:16:17.168437 p2p/server.go:608] Listening on 0.0.0.0:30303
+I0418 18:16:17.169555 node/node.go:341] IPC endpoint opened: /home/fanjianbin/eth/chain/geth.ipc
+I0418 18:32:05.517793 node/node.go:373] IPC endpoint closed: /home/fanjianbin/eth/chain/geth.ipc
+I0418 18:32:05.517953 core/blockchain.go:589] Chain manager stopped
+I0418 18:32:05.518017 eth/handler.go:230] Stopping ethereum protocol handler...
+I0418 18:32:05.518046 eth/handler.go:251] Ethereum protocol handler stopped
+I0418 18:32:05.518089 core/tx_pool.go:196] Transaction pool stopped
+I0418 18:32:05.518113 eth/backend.go:519] Automatic pregeneration of ethash DAG OFF (ethash dir: /home/fanjianbin/.ethash)
+I0418 18:32:05.518416 ethdb/database.go:176] closed db:/home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:34:12.842162 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:34:12.849321 ethdb/database.go:176] closed db:/home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:34:12.849655 node/node.go:176] instance: Geth/v1.5.9-stable-a07539fb/linux/go1.7.3
+I0418 18:34:12.849689 ethdb/database.go:83] Allotted 128MB cache and 1024 file handles to /home/fanjianbin/eth/chain/geth/chaindata
+I0418 18:34:12.882909 eth/backend.go:187] Protocol Versions: [63 62], Network Id: 1
+I0418 18:34:12.883218 eth/backend.go:215] Chain config: {ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000}
+I0418 18:34:12.889459 core/blockchain.go:219] Last header: #2380 [4d24e86f…] TD=562714891
+I0418 18:34:12.889493 core/blockchain.go:220] Last block: #2380 [4d24e86f…] TD=562714891
+I0418 18:34:12.889502 core/blockchain.go:221] Fast block: #2380 [4d24e86f…] TD=562714891
+I0418 18:34:12.890490 p2p/server.go:340] Starting Server
+I0418 18:34:15.052761 p2p/discover/udp.go:227] Listening, enode://370c4933631a2429bc8383be17bb322338275530796c3eef8ce2c2e4be26e9a29b55634b360897fc9ae10eb376a860a9d6ef62e2080411f1d8b14117c5b1f04a@0.0.0.0:30303
+I0418 18:34:15.053475 p2p/server.go:608] Listening on 0.0.0.0:30303
+I0418 18:34:15.054579 node/node.go:341] IPC endpoint opened: /home/fanjianbin/eth/chain/geth.ipc
+I0418 18:36:33.764760 internal/ethapi/api.go:1143] Tx(0x818bcbe923cb55c2bb5544aeef1cb32e04a8457712a70b6cb76acd0ba8edd8ef) to: 0xeb97bed0631515013f58b066b8e8561694e06a3b
+I0418 18:37:40.144343 node/node.go:373] IPC endpoint closed: /home/fanjianbin/eth/chain/geth.ipc
+I0418 18:37:40.144436 core/blockchain.go:589] Chain manager stopped
+I0418 18:37:40.144456 eth/handler.go:230] Stopping ethereum protocol handler...
+I0418 18:37:40.144487 eth/handler.go:251] Ethereum protocol handler stopped
+I0418 18:37:40.144637 core/tx_pool.go:196] Transaction pool stopped
+I0418 18:37:40.144682 eth/backend.go:519] Automatic pregeneration of ethash DAG OFF (ethash dir: /home/fanjianbin/.ethash)
+I0418 18:37:40.145021 ethdb/database.go:176] closed db:/home/fanjianbin/eth/chain/geth/chaindata

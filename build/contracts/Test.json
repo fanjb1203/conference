@@ -1,0 +1,58 @@
+{
+  "contract_name": "Test",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "uint256"
+        }
+      ],
+      "name": "multiply",
+      "outputs": [
+        {
+          "name": "d",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052346000575b6077806100176000396000f300606060405263ffffffff60e060020a600035041663c6888fa181146022575b6000565b34600057602f6004356041565b60408051918252519081900360200190f35b600781025b9190505600a165627a7a72305820c99644b0006869b30f915a01a4ba250730c711947504393dd9709f2c119f80f00029",
+  "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0xf1921bd4ba6c40725cd253bf595803e580e8ac17",
+      "updated_at": 1493172926802
+    },
+    "1493017233604": {
+      "events": {},
+      "links": {},
+      "address": "0x36fed65bb0cfd65726ccfd66339de77d1352678a",
+      "updated_at": 1493025381930
+    },
+    "1493026282688": {
+      "events": {},
+      "links": {},
+      "address": "0x9aefc5233d90ff553c427c12cb01275e42db9c72",
+      "updated_at": 1493026335241
+    },
+    "1493088769926": {
+      "events": {},
+      "links": {},
+      "address": "0x41f44813e4f1b2a9aee381a8c842045c01b10049",
+      "updated_at": 1493098469056
+    },
+    "1493169981856": {
+      "events": {},
+      "links": {},
+      "address": "0xafb9b680655e7bd280f19659ba48dc9e737bc42a",
+      "updated_at": 1493170015857
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1493172926802
+}
