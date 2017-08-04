@@ -1,4 +1,4 @@
-pragma solidity 0.4.10;
+pragma solidity 0.4.8;
 contract TransformationStringOrByte {
     function stringToBytes32(string memory source) returns (bytes32 result) {
         assembly {

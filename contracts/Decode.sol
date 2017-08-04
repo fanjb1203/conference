@@ -9,7 +9,7 @@ contract Decode{
         byte v = slice(signedData,64,1)[0];
         decodeAddress = ecrecoverDecode(r,s,v,sha3Msg);
     }
-    
+    //将原始数据按段切割出来指定长度
     function slice(bytes memory data,uint start,uint len) returns(bytes){
         bytes memory b = new bytes(len);
         for(uint i=0;i<len;i++){
