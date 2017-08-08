@@ -38,7 +38,7 @@ contract BlindAuction{
     	biddingEnd = now + _biddingTime;
     	revealEnd = biddingEnd + _revealTime; 
     }
- 
+
     // 把出价信息用sha3加密后发送给拍卖系统，确保原始数据不被暴露 
     // 同一个地址可以多次出价
     function bids(bytes32 _blindedBid) payable onlyBefore(biddingEnd){
@@ -107,6 +107,9 @@ contract BlindAuction{
      	return true;
      }
 
+     function getBalance() constant returns (uint) {
+        return beneficiary.balance;
+     }
      //当交易没有数据或者数据不对时，触发此函数，
      //重置出价操作，确保出价者不会丢失资金
      function (){
